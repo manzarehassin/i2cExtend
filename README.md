@@ -10,4 +10,9 @@ I2C protocol based I/O Pin extender, external RAM, EEPROM access library for Ard
 
 Still in Beta version. Full version is coming soon.
 
+# Static RAM storage Access
 
+## Ram Read:
+
+RAMread(address); 
+Return Type: byte
