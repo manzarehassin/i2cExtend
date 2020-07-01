@@ -7,6 +7,7 @@ I2C protocol based I/O Pin extender, external RAM, EEPROM access library for Ard
 * 512 bytes External Static Ram storage access
 * 512 bytes External EEPROM storage access
 * 2 Interrupt Access (Coming soon)
+* 2 Device ID selector pins. That means 4 individual units can operate at the same time. 
 
 **_Use ATMEGA8A microcontroller as GPIO extender (I2C Slave)._** 
 
