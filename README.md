@@ -12,7 +12,7 @@ I2C protocol based I/O Pin extender, external RAM, EEPROM access library for Ard
 
 _Still in Beta version. Full version is coming soon._
 
-# _Static RAM storage Access_
+# _Static RAM Storage Access_
 
 ## Reading: 
 ### RAMread(Address); 
@@ -20,11 +20,53 @@ _Still in Beta version. Full version is coming soon._
 
 **Returns** 1 byte of data.
 
+
+
+
 ## Writing: 
 ### RAMwrite(Address,Value);
 
 **Address:** Target address location. Valid location (0-511).
 
-**Value:** 1 byte of data which will be written in RAM storage.
+**Value:** 1 byte of data which will be written into RAM storage.
 
 **Returns** nothing.
+
+
+
+
+## Erase RAM Storage: 
+### RAMflush();
+
+**Returns** nothing.
+
+
+
+
+
+
+
+
+
+# _EEPROM Storage Access_
+
+## Reading: 
+### EEPROMread(Address); 
+**Address:** Target address location. _Valid location (0-511)_.
+
+**Returns** 1 byte of data.
+
+
+
+
+## Writing: 
+### EEPROMwrite(Address,Value);
+
+**Address:** Target address location. Valid location (0-511).
+
+**Value:** 1 byte of data which will be written into RAM storage.
+
+**Returns** nothing.
+
+
+
