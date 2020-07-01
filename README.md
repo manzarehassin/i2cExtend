@@ -15,8 +15,8 @@ _Still in Beta version. Full version is coming soon._
 # _Static RAM Storage Access_
 
 ## Reading: 
-### RAMread(Address); 
-**Address:** Target address location. Valid location (0-511).
+### RAMread(Address)
+**Address:** Target address location. _Valid address location: 0-511_.
 
 **Returns** 1 byte of data.
 
@@ -24,9 +24,9 @@ _Still in Beta version. Full version is coming soon._
 
 
 ## Writing: 
-### RAMwrite(Address,Value);
+### RAMwrite(Address,Value)
 
-**Address:** Target address location. Valid location (0-511).
+**Address:** Target address location. _Valid address location: 0-511_.
 
 **Value:** 1 byte of data which will be written into RAM storage.
 
@@ -36,23 +36,17 @@ _Still in Beta version. Full version is coming soon._
 
 
 ## Erase RAM Storage: 
-### RAMflush();
+### RAMflush()
 
 **Returns** nothing.
-
-
-
-
-
-
 
 
 
 # _EEPROM Storage Access_
 
 ## Reading: 
-### EEPROMread(Address); 
-**Address:** Target address location. _Valid location (0-511)_.
+### EEPROMread(Address)
+**Address:** Target address location. _Valid address location: 0-511_.
 
 **Returns** 1 byte of data.
 
@@ -60,9 +54,9 @@ _Still in Beta version. Full version is coming soon._
 
 
 ## Writing: 
-### EEPROMwrite(Address,Value);
+### EEPROMwrite(Address,Value)
 
-**Address:** Target address location. Valid location (0-511).
+**Address:** Target address location. _Valid address location: 0-511_.
 
 **Value:** 1 byte of data which will be written into RAM storage.
 
@@ -70,3 +64,73 @@ _Still in Beta version. Full version is coming soon._
 
 
 
+# _Extended IO Access_
+
+It provides total 16 IO pins. All of those can be acts as digital pins. Additionally, 4 pins are capable of **analogRead()** function. As a result, it can read analog values from those pins. 3 pins are PWM capable. So, you can perform traditional **analogWrite()** operation.
+
+## Set Pin Modes:
+
+### pinMode(Pin, Mode)
+
+**Pin** : Target pin to set the mode
+
+**Mode**: Valid Pin modes are **INPUT** (for normal input), **OUTPUT** (for output), **INPUT_PULLUP** (for input as pullup)
+
+**Returns** nothing.
+
+
+
+## Get Pin Modes Configuration:
+
+### getConfig()
+
+**Returns** 16 bits Integer. Where **0** represents input and **1** represents output
+
+
+
+
+
+## Digital Write:
+
+### digitalWrite(Pin, Value)
+
+**Pin** : Target pin for writing operation
+
+**Value**: Value which will be written to target pin. Valid values are **HIGH** or **LOW**
+
+**Returns** nothing.
+
+
+## Digital Read:
+
+### digitalRead(Pin)
+
+**Pin** : Target pin for reading operation
+
+**Returns** one bit of data.
+
+
+
+
+
+## Analog Write:
+
+### analogWrite(Pin, Value)
+
+**Pin** : Target pin for writing operation
+
+**Value**: Value which will be written to target pin. Valid values are 0-255.
+
+**Returns** nothing.
+
+
+
+
+
+## Analog Read:
+
+### analogRead(Pin)
+
+**Pin** : Target pin for reading operation
+
+**Returns** 10 bits of integer data (similar to unsigned int).
