@@ -8,11 +8,23 @@ I2C protocol based I/O Pin extender, external RAM, EEPROM access library for Ard
 * 512 bytes External EEPROM storage access
 * 2 Interrupt Access (Coming soon)
 
-Still in Beta version. Full version is coming soon.
+**_Use ATMEGA8A microcontroller as GPIO extender (I2C Slave)._** 
 
-# Static RAM storage Access
+_Still in Beta version. Full version is coming soon._
 
-## Ram Read:
+# _Static RAM storage Access_
 
-RAMread(address); 
-Return Type: byte
+## Reading: 
+### RAMread(Address); 
+**Address:** Target address location. Valid location (0-511).
+
+**Returns** 1 byte of data.
+
+## Writing: 
+### RAMwrite(Address,Value);
+
+**Address:** Target address location. Valid location (0-511).
+
+**Value:** 1 byte of data which will be written in RAM storage.
+
+**Returns** nothing.
