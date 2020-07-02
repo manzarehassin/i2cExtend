@@ -1,0 +1,28 @@
+# -----------------------------------------
+# Syntax colouring for I2C Extend Library
+# -----------------------------------------
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+i2cExtend	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin 		KEYWORD2
+RAMread		KEYWORD2
+RAMwrite	KEYWORD2
+RAMflush	KEYWORD2
+EEPROMread	KEYWORD2
+EEPROMwrite	KEYWORD2
+getConfig	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+RAM_SIZE	LITERAL1
+ROM_SIZE	LITERAL1
