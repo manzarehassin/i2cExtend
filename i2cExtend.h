@@ -37,8 +37,8 @@
 #define INT_0 2
 #define INT_1 3
 
-#ifndef ext
-#define ext
+#ifndef i2c_extend_h
+#define i2c_extend_h
 
 #if (ARDUINO >=100)
   #include "Arduino.h"
